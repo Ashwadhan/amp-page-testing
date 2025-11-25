@@ -1,0 +1,76 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Product Name | Tony Store</title>
+  <link rel="canonical" href="https://www.yoursite.com/product-page">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  <!-- AMP Components -->
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+
+  <style amp-custom>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    .price { font-size: 24px; color: #e60000; font-weight: bold; margin: 10px 0; }
+    .btn { background:#000; color:#fff; padding:12px 18px; border-radius:6px; text-decoration:none; cursor:pointer; display:inline-block; }
+    .container { max-width:800px; margin:auto; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>FOREST TENT</h1>
+    <p>Experience the outdoors in comfort with this premium waterproof tent. Quick setup, strong wind resistance, and breathable mesh ventilation, ideal for hiking, trekking, and family camping..</p>
+
+    <!-- Product Images Carousel -->
+    <amp-carousel width="800" height="600" layout="responsive" type="slides">
+      <amp-img src="C:\Users\V Ashwadhan\Desktop\tent2.jpg" width="800" height="600" layout="responsive"></amp-img>
+      <amp-img src="C:\Users\V Ashwadhan\Desktop\tent1.jpg" width="800" height="600" layout="responsive"></amp-img>
+      <amp-img src="product3.jpg" width="800" height="600" layout="responsive"></amp-img>
+    </amp-carousel>
+
+    <p class="price">₹4999</p>
+    <p>⭐⭐⭐⭐⭐ (124 Reviews)</p>
+
+    <!-- Add to Cart Form -->
+    <form method="post" action-xhr="https://www.yoursite.com/add-to-cart" target="_top">
+      <label>Select Size:</label>
+      <select name="size">
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <br><br>
+      <input type="number" min="1" max="10" value="1" name="qty">
+      <br><br>
+      <button type="submit" class="btn">Add to Cart</button>
+
+      <div submit-success>
+        <template type="amp-mustache">
+          Added to cart!
+        </template>
+      </div>
+    </form>
+
+    <hr>
+
+    <!-- Features -->
+    <h2>Product Details</h2>
+    <ul>
+      <li>High quality material</li>
+      <li>1 year warranty</li>
+      <li>Free delivery and returns</li>
+    </ul>
+
+    <hr>
+
+    <!-- Reviews Section -->
+    <h2>Reviews</h2>
+    <p>Customer feedback goes here...</p>
+
+  </div>
+</body>
+</html>
